@@ -2,17 +2,22 @@
   height: 100px;
   width: 100%;
   display: flex;
-  background-color: var(--black);
+  background-color: black;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 1;
+  color: white;
 }
 
 .nav-title-container {
   flex: 1;
   align-items: center;
   text-align: left;
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  /* border: solid; */
 }
 
 .logo-img {
@@ -39,7 +44,7 @@
   color: var(--white);
   background-position: center;
   transition: 0.6s;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 1px;
   position: relative;
 }

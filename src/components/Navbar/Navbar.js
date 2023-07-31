@@ -1,16 +1,14 @@
 import React from "react";
 import { Link } from "react-scroll";
 import "./Navbar.css";
+// import logo from "../../data/logo-navbar.jpg";
 
 export const Navbar = () => {
   return (
     <nav className='nav-bar-container'>
       <div className='nav-title-container'>
-        <img
-          className='logo-img'
-          src={"../../public/logo-navbar.jpg"}
-          alt='Bar Department logo'
-        ></img>
+        {/* <img className='logo-img' src={logo} alt='Bar Department logo'></img> */}
+        <p>BAR DEPARTMENT</p>
       </div>
       <div className='nav-link-container'>
         <Link
