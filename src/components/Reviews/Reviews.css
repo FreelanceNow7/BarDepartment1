@@ -1,0 +1,21 @@
+.reviews-container {
+  background-color: black;
+  color: white;
+  display: flex;
+  height: 800px;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  align-content: space-between;
+  box-sizing: border-box;
+  align-content: space-around;
+}
+
+.reviews-title {
+  font: 800 40px Arial;
+  align-items: centers;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
