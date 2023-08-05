@@ -3,7 +3,7 @@ import "./WhyUs.css";
 
 export const WhyUs = () => {
   return (
-    <div className='whyus-container'>
+    <div className='whyus-container' id='whyus'>
       <div id='whyus-title'>WHY BAR DEPARTMENT</div>
       <div id='whyus-text'>
         <div id='craftsmanship'>

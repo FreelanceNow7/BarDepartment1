@@ -23,6 +23,15 @@ export const Navbar = () => {
         <Link
           className='nav-bar-link'
           offset={-100}
+          to='whyus'
+          spy={true}
+          smooth='true'
+        >
+          Why Us
+        </Link>
+        <Link
+          className='nav-bar-link'
+          offset={-100}
           to='services'
           spy={true}
           smooth='true'
@@ -46,6 +55,15 @@ export const Navbar = () => {
           smooth='true'
         >
           Reviews
+        </Link>
+        <Link
+          className='nav-bar-link'
+          offset={-100}
+          to='contact'
+          spy={true}
+          smooth='true'
+        >
+          Contact Us
         </Link>
         <Link className='nav-bar-link' to='getAQuote' spy={true} smooth='true'>
           Get a Quote
