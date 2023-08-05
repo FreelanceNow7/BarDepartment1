@@ -2,15 +2,40 @@
   background-color: black;
   color: white;
   display: flex;
-  height: 300px;
+  height: 400px;
   width: 100%;
   align-items: center;
   flex-direction: column;
+  align-content: space-between;
 }
 
 #whyus-title {
-  font: 800 20px Arial;
-  align-items: centers;
+  font: 800 40px Arial;
+  align-items: center;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px;
+  padding-bottom: 40px;
+}
+
+#whyus-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+#craftsmanship {
+  width: 300px;
+  margin: auto;
+  padding: 50px;
+}
+
+#experience {
+  width: 300px;
+  margin: auto;
+  padding: 50px;
+}
+
+#professionalism {
+  width: 300px;
+  margin: 19px;
+  padding: 50px;
 }
