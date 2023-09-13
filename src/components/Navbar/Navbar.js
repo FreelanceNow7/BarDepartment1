@@ -1,17 +1,73 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import "./Navbar.css";
 import logo from "../../data/BarDepartmentlogo.png";
 // import { GetAQuote } from "../GetAQuote/GetAQuote";
 
 export const Navbar = () => {
+  const [scrolling, setScrolling] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    // Function to handle scroll event
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    // Add scroll event listener when component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Function to handle scroll and update active section
+    const handleScrollColor = () => {
+      console.log("I am in a handle scroll!");
+      const sectionIds = [
+        "home",
+        "whyus",
+        "services",
+        "about",
+        "reviews",
+        "contact",
+        "getAQuote",
+      ];
+      const scrollPosition = window.scrollY;
+
+      // Determine which section is currently in view
+      let active = "";
+      for (const sectionId of sectionIds) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          const sectionTop = section.offsetTop;
+          const sectionBottom = sectionTop + section.clientHeight;
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            active = sectionId;
+            break;
+          }
+        }
+      }
+
+      setActiveSection(active);
+    };
+
+    window.addEventListener("scroll", handleScrollColor);
+
+    return () => {
+      window.removeEventListener("scroll", handleScrollColor);
+    };
+  }, []);
+
   return (
-    <nav className='nav-bar-container'>
-      <div className='nav-title-container'>
-        <div className='nav-title-inner'>
-          <img className='logo' src={logo} alt='BarDepLogo'></img>
-        </div>
-      </div>
+    <nav className={`navbar ${scrolling ? "scroll" : ""}`}>
       <div className='nav-link-container'>
         <Link
           className='nav-bar-link'
@@ -19,8 +75,9 @@ export const Navbar = () => {
           to='home'
           spy={true}
           smooth='true'
+          activeClass={activeSection === "home" ? "active" : ""}
         >
-          Home
+          HOME
         </Link>
         <Link
           className='nav-bar-link'
@@ -28,8 +85,9 @@ export const Navbar = () => {
           to='whyus'
           spy={true}
           smooth='true'
+          activeClass={activeSection === "whyus" ? "active" : ""}
         >
-          Why Us
+          WHY US
         </Link>
         <Link
           className='nav-bar-link'
@@ -37,17 +95,20 @@ export const Navbar = () => {
           to='services'
           spy={true}
           smooth='true'
+          activeClass={activeSection === "services" ? "active" : ""}
         >
-          Services
+          SERVICES
         </Link>
+        <img className='logo' src={logo} alt='BarDepLogo'></img>
         <Link
           className='nav-bar-link'
           offset={-100}
           to='about'
           spy={true}
           smooth='true'
+          activeClass={activeSection === "about" ? "active" : ""}
         >
-          About Us
+          ABOUT US
         </Link>
         <Link
           className='nav-bar-link'
@@ -55,8 +116,9 @@ export const Navbar = () => {
           to='reviews'
           spy={true}
           smooth='true'
+          activeClass={activeSection === "reviews" ? "active" : ""}
         >
-          Reviews
+          REVIEWS
         </Link>
         <Link
           className='nav-bar-link'
@@ -64,18 +126,21 @@ export const Navbar = () => {
           to='contact'
           spy={true}
           smooth='true'
+          activeClass={activeSection === "contact" ? "active" : ""}
         >
-          Contact Us
+          CONTACT US
         </Link>
-        <button>
+        <button id='getaquotebutton'>
           {" "}
           <Link
             className='nav-bar-link'
+            id='linkgetaquote'
             to='getAQuote'
             spy={true}
             smooth='true'
+            activeClass={activeSection === "getAQuote" ? "active" : ""}
           >
-            Get a Quote
+            GET A QUOTE
           </Link>
         </button>
       </div>

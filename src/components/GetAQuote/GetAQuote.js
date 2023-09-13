@@ -47,7 +47,6 @@ export const GetAQuote = () => {
             className='input-field'
             type='text'
             name='user_name'
-            placeholder='Enter your first name'
             required
           />
         </div>
@@ -59,7 +58,6 @@ export const GetAQuote = () => {
             className='input-field'
             type='text'
             name='user_name'
-            placeholder='Enter your  last name'
             required
           />
         </div>
@@ -71,7 +69,6 @@ export const GetAQuote = () => {
             className='input-field'
             type='email'
             name='user_email'
-            placeholder='Enter your email'
             required
           />
         </div>
@@ -83,7 +80,6 @@ export const GetAQuote = () => {
             className='input-field'
             type='text'
             name='user_name'
-            placeholder='Enter your phone number'
             required
           />
         </div>
@@ -91,12 +87,7 @@ export const GetAQuote = () => {
           <label className='input-label' htmlFor='message'>
             Type of event
           </label>
-          <textarea
-            className='input-field if-text'
-            name='message'
-            placeholder='Where will event take place, how many people...'
-            required
-          />
+          <textarea className='input-field if-text' name='message' required />
         </div>
         {sent === true ? (
           <button className='contact-button' disabled>
