@@ -6,6 +6,7 @@ import logo from "../../data/BarDepartmentlogo.png";
 
 export const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     // Function to handle scroll event
@@ -25,6 +26,46 @@ export const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    // Function to handle scroll and update active section
+    const handleScrollColor = () => {
+      console.log("I am in a handle scroll!");
+      const sectionIds = [
+        "home",
+        "whyus",
+        "services",
+        "about",
+        "reviews",
+        "contact",
+        "getAQuote",
+      ];
+      const scrollPosition = window.scrollY;
+
+      // Determine which section is currently in view
+      let active = "";
+      for (const sectionId of sectionIds) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          const sectionTop = section.offsetTop;
+          const sectionBottom = sectionTop + section.clientHeight;
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            active = sectionId;
+            break;
+          }
+        }
+      }
+
+      setActiveSection(active);
+    };
+
+    window.addEventListener("scroll", handleScrollColor);
+
+    return () => {
+      window.removeEventListener("scroll", handleScrollColor);
+    };
+  }, []);
+
   return (
     <nav className={`navbar ${scrolling ? "scroll" : ""}`}>
       <div className='nav-link-container'>
@@ -34,6 +75,7 @@ export const Navbar = () => {
           to='home'
           spy={true}
           smooth='true'
+          activeClass={activeSection === "home" ? "active" : ""}
         >
           HOME
         </Link>
@@ -43,6 +85,7 @@ export const Navbar = () => {
           to='whyus'
           spy={true}
           smooth='true'
+          activeClass={activeSection === "whyus" ? "active" : ""}
         >
           WHY US
         </Link>
@@ -52,6 +95,7 @@ export const Navbar = () => {
           to='services'
           spy={true}
           smooth='true'
+          activeClass={activeSection === "services" ? "active" : ""}
         >
           SERVICES
         </Link>
@@ -62,6 +106,7 @@ export const Navbar = () => {
           to='about'
           spy={true}
           smooth='true'
+          activeClass={activeSection === "about" ? "active" : ""}
         >
           ABOUT US
         </Link>
@@ -71,6 +116,7 @@ export const Navbar = () => {
           to='reviews'
           spy={true}
           smooth='true'
+          activeClass={activeSection === "reviews" ? "active" : ""}
         >
           REVIEWS
         </Link>
@@ -80,6 +126,7 @@ export const Navbar = () => {
           to='contact'
           spy={true}
           smooth='true'
+          activeClass={activeSection === "contact" ? "active" : ""}
         >
           CONTACT US
         </Link>
@@ -91,6 +138,7 @@ export const Navbar = () => {
             to='getAQuote'
             spy={true}
             smooth='true'
+            activeClass={activeSection === "getAQuote" ? "active" : ""}
           >
             GET A QUOTE
           </Link>
