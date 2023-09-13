@@ -6,7 +6,7 @@ import { WhyUs } from "../WhyUs/WhyUs";
 import { Services } from "../Services/Services";
 import { AboutUs } from "../AboutUs/AboutUs";
 import { Reviews } from "../Reviews/Reviews";
-// import { GetAQuote } from "../GetAQuote/GetAQuote";
+import { GetAQuote } from "../GetAQuote/GetAQuote";
 import { ContactUs } from "../ContactUs/ContactUs";
 
 export const Main = () => {
@@ -18,8 +18,8 @@ export const Main = () => {
       <Services />
       <AboutUs />
       <Reviews />
+      <GetAQuote />
       <ContactUs />
-      {/* <GetAQuote /> */}
     </div>
   );
 };

@@ -1,14 +1,16 @@
 import React from "react";
 import { Link } from "react-scroll";
 import "./Navbar.css";
-// import logo from "../../data/logo-navbar.jpg";
+import logo from "../../data/BarDepartmentlogo.png";
+// import { GetAQuote } from "../GetAQuote/GetAQuote";
 
 export const Navbar = () => {
   return (
     <nav className='nav-bar-container'>
       <div className='nav-title-container'>
-        {/* <img className='logo-img' src={logo} alt='Bar Department logo'></img> */}
-        <p>BAR DEPARTMENT</p>
+        <div className='nav-title-inner'>
+          <img className='logo' src={logo} alt='BarDepLogo'></img>
+        </div>
       </div>
       <div className='nav-link-container'>
         <Link
@@ -65,9 +67,17 @@ export const Navbar = () => {
         >
           Contact Us
         </Link>
-        <Link className='nav-bar-link' to='getAQuote' spy={true} smooth='true'>
-          Get a Quote
-        </Link>
+        <button>
+          {" "}
+          <Link
+            className='nav-bar-link'
+            to='getAQuote'
+            spy={true}
+            smooth='true'
+          >
+            Get a Quote
+          </Link>
+        </button>
       </div>
     </nav>
   );
