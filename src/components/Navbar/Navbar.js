@@ -27,11 +27,6 @@ export const Navbar = () => {
   }, []);
   return (
     <nav className={`navbar ${scrolling ? "scroll" : ""}`}>
-      <div className='nav-title-container'>
-        <div className='nav-title-inner'>
-          <img className='logo' src={logo} alt='BarDepLogo'></img>
-        </div>
-      </div>
       <div className='nav-link-container'>
         <Link
           className='nav-bar-link'
@@ -40,7 +35,7 @@ export const Navbar = () => {
           spy={true}
           smooth='true'
         >
-          Home
+          HOME
         </Link>
         <Link
           className='nav-bar-link'
@@ -49,7 +44,7 @@ export const Navbar = () => {
           spy={true}
           smooth='true'
         >
-          Why Us
+          WHY US
         </Link>
         <Link
           className='nav-bar-link'
@@ -58,8 +53,9 @@ export const Navbar = () => {
           spy={true}
           smooth='true'
         >
-          Services
+          SERVICES
         </Link>
+        <img className='logo' src={logo} alt='BarDepLogo'></img>
         <Link
           className='nav-bar-link'
           offset={-100}
@@ -67,7 +63,7 @@ export const Navbar = () => {
           spy={true}
           smooth='true'
         >
-          About Us
+          ABOUT US
         </Link>
         <Link
           className='nav-bar-link'
@@ -76,7 +72,7 @@ export const Navbar = () => {
           spy={true}
           smooth='true'
         >
-          Reviews
+          REVIEWS
         </Link>
         <Link
           className='nav-bar-link'
@@ -85,17 +81,18 @@ export const Navbar = () => {
           spy={true}
           smooth='true'
         >
-          Contact Us
+          CONTACT US
         </Link>
-        <button>
+        <button id='getaquotebutton'>
           {" "}
           <Link
             className='nav-bar-link'
+            id='linkgetaquote'
             to='getAQuote'
             spy={true}
             smooth='true'
           >
-            Get a Quote
+            GET A QUOTE
           </Link>
         </button>
       </div>

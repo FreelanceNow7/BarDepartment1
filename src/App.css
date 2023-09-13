@@ -22,12 +22,11 @@
   ); /* Initial background with transparency */
   position: fixed;
   width: 100%;
-  padding: 10px 0;
   transition: background-color 0.3s ease;
   height: 100px;
   width: 100%;
   display: flex;
-  align-items: center;
+  justify-content: center;
   color: white;
 }
 
