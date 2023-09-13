@@ -13,6 +13,33 @@
   }
 }
 
+.navbar {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.01
+  ); /* Initial background with transparency */
+  position: fixed;
+  width: 100%;
+  padding: 10px 0;
+  transition: background-color 0.3s ease;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.navbar.scroll {
+  background-color: black; /* Solid background on scroll */
+}
+
+.content {
+  margin-top: 60px; /* Adjust to match your navbar height */
+  padding: 20px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

@@ -1,12 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import "./Navbar.css";
 import logo from "../../data/BarDepartmentlogo.png";
 // import { GetAQuote } from "../GetAQuote/GetAQuote";
 
 export const Navbar = () => {
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    // Function to handle scroll event
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    // Add scroll event listener when component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <nav className='nav-bar-container'>
+    <nav className={`navbar ${scrolling ? "scroll" : ""}`}>
       <div className='nav-title-container'>
         <div className='nav-title-inner'>
           <img className='logo' src={logo} alt='BarDepLogo'></img>
