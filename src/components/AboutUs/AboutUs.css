@@ -5,17 +5,30 @@
   height: 800px;
   width: 100%;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   align-content: space-between;
   box-sizing: border-box;
   align-content: space-around;
+  padding: 20px;
+  padding-left: 100px;
 }
 
 .aboutus-title {
   font: 800 40px Arial;
+  background-color: black;
+  color: white;
   align-items: centers;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px;
   padding-bottom: 40px;
   padding-top: 20px;
+}
+
+.aboutus-text {
+  width: 600px;
+  text-align: left;
+}
+
+.text {
+  padding-left: 50px;
 }

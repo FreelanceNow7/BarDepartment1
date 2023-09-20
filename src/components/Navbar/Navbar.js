@@ -30,7 +30,6 @@ export const Navbar = () => {
   useEffect(() => {
     // Function to handle scroll and update active section
     const handleScrollColor = () => {
-      console.log("I am in a handle scroll!");
       const sectionIds = [
         "home",
         "whyus",
