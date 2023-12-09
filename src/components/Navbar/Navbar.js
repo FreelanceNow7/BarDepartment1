@@ -99,7 +99,7 @@ export const Navbar = () => {
           SERVICES
         </Link>
         <img className='logo' src={logo} alt='BarDepLogo'></img>
-        <Link
+        {/* <Link
           className='nav-bar-link'
           offset={-100}
           to='about'
@@ -108,7 +108,7 @@ export const Navbar = () => {
           activeClass={activeSection === "about" ? "active" : ""}
         >
           ABOUT US
-        </Link>
+        </Link> */}
         <Link
           className='nav-bar-link'
           offset={-100}
