@@ -4,7 +4,7 @@ import { Navbar } from "../Navbar/Navbar";
 import { Home } from "../Home/Home";
 import { WhyUs } from "../WhyUs/WhyUs";
 import { Services } from "../Services/Services";
-import { AboutUs } from "../AboutUs/AboutUs";
+// import { AboutUs } from "../AboutUs/AboutUs";
 import { Reviews } from "../Reviews/Reviews";
 import { GetAQuote } from "../GetAQuote/GetAQuote";
 import { ContactUs } from "../ContactUs/ContactUs";
@@ -16,7 +16,7 @@ export const Main = () => {
       <Home />
       <WhyUs />
       <Services />
-      <AboutUs />
+      {/* <AboutUs /> */}
       <Reviews />
       <GetAQuote />
       <ContactUs />
