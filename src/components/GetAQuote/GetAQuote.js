@@ -4,28 +4,28 @@ import emailjs from "@emailjs/browser";
 import "./GetAQuote.css";
 
 export const GetAQuote = () => {
-  const [sent, setSent] = useState("false");
+  const [sent, setSent] = useState(false);
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
+    // emailjs.init("3erj7QOg1mV3Ipaz6");
 
     emailjs
       .sendForm(
-        "contact_service",
-        "contact_form",
+        "service_jte2mhe",
+        "template_ck7jrbo",
         form.current,
-        "service_jte2mhe"
+        "3erj7QOg1mV3Ipaz6"
       )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setSent(true);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+      .then((result) => {
+        console.log(result.text);
+        setSent(true);
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+      });
+
     e.target.reset();
   };
   return (

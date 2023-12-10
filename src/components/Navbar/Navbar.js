@@ -128,15 +128,15 @@ export const Navbar = () => {
           activeClass={activeSection === "contact" ? "active" : ""}
         >
           CONTACT US
-        </Link>
+        </Link>{" "}
         <button id='getaquotebutton'>
-          {" "}
           <Link
             className='nav-bar-link'
             id='linkgetaquote'
             to='getAQuote'
             spy={true}
-            smooth='true'
+            smooth={true}
+            offset={-250}
             activeClass={activeSection === "getAQuote" ? "active" : ""}
           >
             GET A QUOTE

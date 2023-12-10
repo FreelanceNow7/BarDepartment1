@@ -65,6 +65,9 @@ export const Services = () => {
                 </p>
               </div>
             </div>
+            <div id='third row'>
+              <p>All packages include efficient post-event cleanup.</p>
+            </div>
           </div>
         </div>
       </div>
