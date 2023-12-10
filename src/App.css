@@ -2,6 +2,31 @@
   text-align: center;
 }
 
+.intro {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out;
+  font-size: 2em;
+  text-align: center;
+}
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+.intro.hidden {
+  opacity: 0;
+}
+
+.website {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.website.visible {
+  opacity: 1;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -21,12 +46,7 @@
 } */
 
 .navbar {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.01
-  ); /* Initial background with transparency */
+  background-color: rgba(255, 255, 255, 0.01);
   position: fixed;
   width: 100%;
   transition: background-color 0.3s ease;
@@ -35,6 +55,7 @@
   display: flex;
   justify-content: center;
   color: white;
+  transition: background-color 0.3s ease;
 }
 
 .navbar.scroll {
