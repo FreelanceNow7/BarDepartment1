@@ -2,7 +2,7 @@
   background-color: black;
   color: white;
   display: flex;
-  height: 600px;
+  height: 800px;
   width: 100%;
   align-items: center;
   flex-direction: column;
@@ -14,7 +14,13 @@
   align-items: center;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px;
-  padding-bottom: 40px;
+  padding-bottom: 70px;
+}
+
+#whyus-history {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
 
 #whyus-text {
