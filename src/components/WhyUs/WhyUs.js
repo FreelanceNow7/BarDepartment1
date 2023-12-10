@@ -5,6 +5,22 @@ export const WhyUs = () => {
   return (
     <div className='whyus-container' id='whyus'>
       <div id='whyus-title'>WHY BAR DEPARTMENT</div>
+      <div id='whyus-history'>
+        <p>
+          At Bar Department, we believe that every event is a unique narrative
+          waiting to unfold, and we're here to add the perfect flavor to your
+          story. As a premier catering bartending service, we don't just serve
+          drinks; we craft experiences that linger in the memories of your
+          guests.
+        </p>
+        <p>
+          Established in 2019, Bar Department was born out of a passion for
+          mixology and a commitment to turning ordinary gatherings into
+          extraordinary celebrations. What sets us apart is not just the quality
+          of our beverages but the artistry with which we blend spirits,
+          flavors, and a touch of magic.
+        </p>
+      </div>
       <div id='whyus-text'>
         <div id='craftsmanship'>
           <h3>Exquisite Craftsmanship</h3>
