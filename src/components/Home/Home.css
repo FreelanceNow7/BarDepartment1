@@ -24,3 +24,10 @@
   font: 800 20px Arial;
   font-weight: lighter;
 }
+
+@media (max-width: 768px) {
+  .home-container {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+}

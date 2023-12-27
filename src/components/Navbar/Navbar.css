@@ -19,6 +19,8 @@
 }
 
 #getaquotebutton {
+  border-radius: 25%;
+  background-color: #b1b1b1;
   height: 60px;
   margin: 20px;
 }
@@ -64,18 +66,18 @@
 }
 
 @media screen and (max-width: 786px) {
-  .nav-bar-container {
+  .nav-link-container {
     width: 100%;
   }
 
-  .logo-img {
+  /* .logo-img {
     margin-left: 0px;
-  }
+  } */
 
   .nav-bar-link,
   .nav-bar-link-active {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 10px;
     width: 5rem;
   }
 }
