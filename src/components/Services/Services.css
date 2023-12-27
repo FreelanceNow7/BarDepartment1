@@ -84,3 +84,27 @@
   margin: auto;
   padding: 30px;
 }
+
+@media (max-width: 768px) {
+  .services-container {
+    height: fit-content;
+  }
+  .services-inner-box {
+    height: fit-content;
+    width: fit-content;
+  }
+  #services-text {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #services-text > * {
+    flex: 1 1 200px;
+  }
+  #first-row {
+    flex-direction: column;
+  }
+  #second-row {
+    flex-direction: column;
+  }
+}

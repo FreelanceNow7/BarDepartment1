@@ -2,31 +2,6 @@
   text-align: center;
 }
 
-.intro {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.5s ease-in-out;
-  font-size: 2em;
-  text-align: center;
-}
-
-.fade-out {
-  opacity: 0;
-  visibility: hidden;
-}
-.intro.hidden {
-  opacity: 0;
-}
-
-.website {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.website.visible {
-  opacity: 1;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -38,12 +13,14 @@
   }
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .App {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
   }
-} */
+  .navbar {
+    width: 100%;
+  }
+}
 
 .navbar {
   background-color: rgba(255, 255, 255, 0.01);

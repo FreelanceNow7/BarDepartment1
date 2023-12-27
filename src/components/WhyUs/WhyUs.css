@@ -45,3 +45,22 @@
   margin: 19px;
   padding: 50px;
 }
+
+@media (max-width: 768px) {
+  .whyus-container {
+    height: fit-content;
+  }
+  #whyus-text {
+    flex-direction: column;
+  }
+  #craftsmanship {
+    border: 1px solid white;
+  }
+  #experience {
+    border: 1px solid white;
+  }
+  #professionalism {
+    border: 1px solid white;
+    margin: 0;
+  }
+}

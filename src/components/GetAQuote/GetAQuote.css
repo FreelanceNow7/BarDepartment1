@@ -81,6 +81,7 @@ textarea:focus {
   justify-content: center;
   align-items: center;
   border: 2px solid white;
+  border-radius: 25%;
   font-family: var(--copy);
   text-decoration: none;
   text-transform: uppercase;
