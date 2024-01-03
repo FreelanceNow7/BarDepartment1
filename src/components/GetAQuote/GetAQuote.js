@@ -9,7 +9,6 @@ export const GetAQuote = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    // emailjs.init("3erj7QOg1mV3Ipaz6");
 
     emailjs
       .sendForm(

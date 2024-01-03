@@ -35,8 +35,6 @@
   flex-direction: row;
   justify-content: center;
   align-content: center;
-  /* padding-left: 120px; */
-  /* remove padding-left when you have equal amount of links on both sides of logo */
 }
 
 .nav-bar-link {
@@ -65,14 +63,10 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 768px) {
   .nav-link-container {
     width: 100%;
   }
-
-  /* .logo-img {
-    margin-left: 0px;
-  } */
 
   .nav-bar-link,
   .nav-bar-link-active {
