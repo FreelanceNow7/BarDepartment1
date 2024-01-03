@@ -2,14 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import "./Navbar.css";
 import logo from "../../data/BarDepartmentlogo.png";
-// import { GetAQuote } from "../GetAQuote/GetAQuote";
 
 export const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
-    // Function to handle scroll event
     const handleScroll = () => {
       if (window.scrollY > 100) {
         setScrolling(true);
@@ -18,17 +16,14 @@ export const Navbar = () => {
       }
     };
 
-    // Add scroll event listener when component mounts
     window.addEventListener("scroll", handleScroll);
 
-    // Clean up the listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   useEffect(() => {
-    // Function to handle scroll and update active section
     const handleScrollColor = () => {
       const sectionIds = [
         "home",
@@ -41,7 +36,6 @@ export const Navbar = () => {
       ];
       const scrollPosition = window.scrollY;
 
-      // Determine which section is currently in view
       let active = "";
       for (const sectionId of sectionIds) {
         const section = document.getElementById(sectionId);
@@ -99,16 +93,6 @@ export const Navbar = () => {
           SERVICES
         </Link>
         <img className='logo' src={logo} alt='BarDepLogo'></img>
-        {/* <Link
-          className='nav-bar-link'
-          offset={-100}
-          to='about'
-          spy={true}
-          smooth='true'
-          activeClass={activeSection === "about" ? "active" : ""}
-        >
-          ABOUT US
-        </Link> */}
         <Link
           className='nav-bar-link'
           offset={-100}

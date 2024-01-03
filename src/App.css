@@ -36,11 +36,11 @@
 }
 
 .navbar.scroll {
-  background-color: black; /* Solid background on scroll */
+  background-color: black;
 }
 
 .content {
-  margin-top: 60px; /* Adjust to match your navbar height */
+  margin-top: 60px;
   padding: 20px;
 }
 

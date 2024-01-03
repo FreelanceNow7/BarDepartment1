@@ -101,7 +101,7 @@ textarea:focus {
   opacity: 0.5;
 }
 
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 768px) {
   .input-label,
   .input-form {
     font-size: 18px;
