@@ -116,27 +116,7 @@ export const Navbar = () => {
         >
           CONTACT US
         </Link>{" "}
-        <button id='getaquotebutton'>
-          <Link
-            className='nav-bar-link'
-            offset={-100}
-            to='reviews'
-            spy={true}
-            smooth='true'
-            activeClass={activeSection === "reviews" ? "active" : ""}
-          >
-            REVIEWS
-          </Link>
-          <Link
-            className='nav-bar-link'
-            offset={-100}
-            to='contact'
-            spy={true}
-            smooth='true'
-            activeClass={activeSection === "contact" ? "active" : ""}
-          >
-            CONTACT US
-          </Link>{" "}
+        
           <button id='getaquotebutton'>
             <Link
               className='nav-bar-link'
