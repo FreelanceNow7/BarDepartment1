@@ -150,7 +150,6 @@ export const Navbar = () => {
               GET A QUOTE
             </Link>
           </button>
-        </div>
       </div>
     </nav>
   );
