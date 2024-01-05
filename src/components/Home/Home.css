@@ -30,4 +30,14 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
+
+  #home-first {
+    max-width: 100%;
+    font-size: 12vw;
+  }
+
+  #home-second {
+    max-width: 100%;
+    font-size: 4vw;
+  }
 }

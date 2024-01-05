@@ -17,7 +17,7 @@
 .services-inner-box {
   border: 2px solid white;
   height: 750px;
-  width: 1200px;
+  max-width: 1200px;
   box-sizing: border-box;
   padding: 1rem;
 }

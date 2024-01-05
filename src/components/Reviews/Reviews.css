@@ -60,3 +60,23 @@
 .navigation-buttons button:hover {
   background-color: #555;
 }
+
+@media (max-width: 768px) {
+  .navigation-buttons {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: static;
+    height: 100%;
+    margin-top: 20px;
+  }
+
+  .navigation-buttons button {
+    width: auto;
+    margin: 10px;
+  }
+
+  .navigation-buttons button:nth-child(2) {
+    margin-top: auto;
+  }
+}

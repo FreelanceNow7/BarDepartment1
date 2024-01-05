@@ -15,7 +15,7 @@
   width: 220px;
   padding-left: 30px;
   padding-right: 30px;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 #getaquotebutton {
@@ -54,8 +54,19 @@
   margin: 1px;
 }
 
-.nav-bar-link .active {
-  color: #ff0000;
+.first {
+  display: flex;
+  margin-top: 20px;
+}
+
+.second {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-around;
+}
+
+.nav-bar-link.active {
+  color: goldenrod;
 }
 
 .nav-bar-link:hover {
@@ -65,7 +76,13 @@
 
 @media screen and (max-width: 768px) {
   .nav-link-container {
-    width: 100%;
+    max-width: 100%;
+    height: 20%;
+    flex-direction: column;
+  }
+
+  #getaquotebutton {
+    height: 25px;
   }
 
   .nav-bar-link,
